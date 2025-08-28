@@ -1,0 +1,34 @@
+{
+  "info": {
+    "name": "Kafka Avro Orders",
+    "_postman_id": "kafka-avro-orders",
+    "description": "Test producing Kafka Avro events via REST endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Order Event",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"orderId\": \"O-1001\",\n    \"customerId\": \"C-501\",\n    \"totalAmount\": 1999.99\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
