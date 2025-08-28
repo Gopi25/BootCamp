@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "OrderLifecycle Microservice",
+    "_postman_id": "e3b5a7e0-1234-5678-90ab-cdef12345678",
+    "description": "Test collection for OrderLifecycle microservice (Spring Boot + MongoDB)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "POST orderPlaced",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer\": \"Gopi\",\n  \"items\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/orders/123/events/orderPlaced",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders","123","events","orderPlaced"]
+        }
+      }
+    },
+    {
+      "name": "POST orderPaid",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 599.99,\n  \"method\": \"CreditCard\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/orders/123/events/orderPaid",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders","123","events","orderPaid"]
+        }
+      }
+    },
+    {
+      "name": "POST orderShipped",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"courier\": \"DHL\",\n  \"trackingId\": \"XYZ123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/orders/123/events/orderShipped",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders","123","events","orderShipped"]
+        }
+      }
+    },
+    {
+      "name": "GET Order Document",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders/123",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders","123"]
+        }
+      }
+    }
+  ]
+}
