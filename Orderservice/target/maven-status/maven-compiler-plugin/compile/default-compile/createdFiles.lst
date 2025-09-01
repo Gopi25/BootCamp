@@ -1,0 +1,12 @@
+com\example\Orderservice\controller\OrderController.class
+com\example\Orderservice\model\Order$OrderBuilder.class
+com\example\Orderservice\model\Order.class
+com\example\Orderservice\avro\OrderCreatedEvent.class
+com\example\Orderservice\kafka\OrderProducer.class
+com\example\Orderservice\event\OrderEventDocument.class
+com\example\Orderservice\OrderserviceApplication.class
+com\example\Orderservice\event\OrderEventRepository.class
+com\example\Orderservice\event\OrderEventDocument$OrderEventDocumentBuilder.class
+com\example\Orderservice\avro\OrderCreatedEvent$Builder.class
+com\example\Orderservice\service\OrderService.class
+com\example\Orderservice\repository\OrderRepository.class

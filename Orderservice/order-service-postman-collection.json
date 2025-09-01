@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "Order Service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for testing the Order Service API with Postgres + Kafka + MongoDB integration."
+  },
+  "item": [
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product\": \"Laptop\",\n  \"quantity\": 2,\n  \"price\": 1500.0\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/order",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "order"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
